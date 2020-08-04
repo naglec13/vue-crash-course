@@ -2,17 +2,30 @@
   <div id="app">
     <h1>Todo Application</h1>
     <hr/>
-    <TodoList/>
+    <TodoList
+        v-bind:todos="todos"
+    />
   </div>
 </template>
 
 <script>
 
 import TodoList from '@/components/TodoList'
+
 export default {
   name: 'App',
+  data() {
+    return {
+      todos: [
+        {id: 1, title: 'Buy some milk', completed: false},
+        {id: 2, title: 'Buy some coffee', completed: false},
+        {id: 3, title: 'Buy some sugar', completed: false},
+        {id: 4, title: 'Buy some whisky', completed: false}
+      ]
+    }
+  },
   components: {
-  TodoList
+    TodoList
   }
 }
 </script>
