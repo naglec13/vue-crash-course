@@ -1,7 +1,7 @@
 <template>
   <li>
-    <span>
-      <input type="checkbox">
+    <span v-bind:class="{done: todo.completed}">
+      <input type="checkbox" v-on:change="todo.completed = !todo.completed">
       <strong>{{ todo.id }}</strong>
       {{ todo.title }}
     </span>
@@ -21,26 +21,28 @@ export default {
 </script>
 
 <style scoped>
- li{
-   border: 2px solid #ccc ;
-   display: flex;
-   justify-content: space-between;
-   padding:.5rem 2rem;
-   margin-bottom: 3px;
- }
- input{
-   margin-right: 1rem;
- }
- .rm{
-   background: red;
-   color: white;
-   border-radius: 50%;
-   font-weight: bold;
- }
+li {
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 2rem;
+  margin-bottom: 3px;
+}
 
- .done{
-   text-decoration: line-through;
- }
+input {
+  margin-right: 1rem;
+}
+
+.rm {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.done {
+  text-decoration: line-through;
+}
 
 </style>
 
