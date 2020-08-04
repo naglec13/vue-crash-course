@@ -1,9 +1,25 @@
 <template>
-  <form>
-    <input type="text" >
-    <button type="submit">Create</button>
+  <form @.prevent="onSubmit">
+    <input type="text">
+    <button type="submit" v-model="title">Create</button>
   </form>
 </template>
+
+<script>
+export default {
+  data(){
+    return{
+      title: ''
+    }
+  },
+  methods:{
+    onSubmit(){
+      console.log('submit',this.title)
+    }
+  }
+}
+</script>
+
 
 <style scoped>
   form{
