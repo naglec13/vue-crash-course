@@ -1,5 +1,7 @@
 # vue-crash-course
 
+<img src='https://senior.ua/storage/article/content/8433fb21-d3a8-4423-8dda-0d28d1839bf8.jpeg'>
+
 ## Project setup
 ```
 npm install
